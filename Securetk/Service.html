@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Securetek Solutions Pvt. Ltd.</title>
+  <meta name="description" content="Securetek Solutions - Fire safety, gas suppression, CCTV, access control and integrated security solutions." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    html,body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    /* subtle page background */
+    body { background: linear-gradient(180deg, #f3f6fb 0%, #eef2f6 100%); }
+    /* sticky left nav shadow */
+    .sticky-nav { position: sticky; top: 96px; }
+    /* card lift */
+    .service-card { transition: transform .28s ease, box-shadow .28s ease; }
+    .service-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(12, 18, 35, .12); }
+    /* small decorative left border for current */
+    .nav-dot { width: 6px; height: 6px; border-radius: 9999px; }
+    /* image aspect fix */
+    .card-media { object-fit: cover; width: 100%; height: 150px; }
+    @media (min-width: 1024px) {
+      .card-media { height: 160px; }
+    }
+  </style>
+</head>
+<body class="text-slate-800">
+<!-- Header -->
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo + Company Name -->
+    <div class="flex items-center gap-4">
+
+      <!-- Logo -->
+      <img src="logo-120x120.png" alt="Securetek Solutions Logo"
+           class="object-contain" style="width:120px; height:120px;">
+
+      <!-- Company Text -->
+      <div>
+        <div class="text-lg font-semibold">Securetek Solutions Pvt. Ltd.</div>
+        <div class="text-xs text-slate-500">
+          Fire Safety • Gas Suppression • CCTV • Access Control
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+      <a href="index.html" class="hover:text-sky-600">Home</a>
+      <a href="#about" class="hover:text-sky-600">About</a>
+      <a href="#services" class="text-sky-600 font-semibold">Services</a>
+      <a href="#contact" class="hover:text-sky-600">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+  <!-- Hero / Title -->
+  <section class="bg-gradient-to-r from-slate-50 to-white border-b">
+    <div class="max-w-7xl mx-auto px-6 py-10 md:py-16 flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1">
+        <h1 class="text-3xl md:text-4xl font-extrabold">Services</h1>
+        <p class="mt-3 text-slate-600 max-w-2xl">Comprehensive fire protection, gas suppression, CCTV and access control solutions — design, installation and 24/7 maintenance for commercial, industrial and data centre environments.</p>
+      </div>
+
+      <div class="w-full md:w-80">
+        <div class="bg-white rounded-xl p-4 shadow sm:flex sm:items-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 text-white flex items-center justify-center font-bold">20+</div>
+          <div class="mt-2 sm:mt-0">
+            <div class="text-sm text-slate-500">Years Experience</div>
+            <div class="font-semibold">95% Client Retention</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT – simple & attractive -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-2xl shadow-sm mt-8">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-10 h-10 rounded-lg overflow-hidden shadow">
+  <img src="logo-120x120.png" alt="Logo" class="w-full h-full object-contain bg-white">
+</div>
+
+      <h2 class="text-2xl font-bold text-slate-800">About Securetek Solutions Pvt. Ltd.</h2>
+    </div>
+
+    <div class="space-y-4 text-slate-700 leading-relaxed">
+      <p>
+        Securetek Solutions Private Limited specializes in protection of safety and security equipment. Our management team has over <strong>20 years</strong> of experience in the Fire Safety & Security industry.
+      </p>
+
+      <p>
+        We design, install and maintain Fire Alarm Systems, Fire Protection Systems and Gas Suppression Systems for small offices, large office complexes, malls, industries and critical areas like server rooms — all certified to industry Codes of Practice and current regulations.
+      </p>
+
+      <p>
+        With a client retention rate of over <strong>95%</strong>, we are trusted for delivering cost-effective, high-quality solutions tailored to individual site needs.
+      </p>
+
+      <p>
+        Using the latest technology, we provide CCTV, Intruder Alarm, Access Control and integrated security solutions. Our approach minimises risks by combining best design practices with industry standards.
+      </p>
+    </div>
+
+    <div class="mt-6 bg-sky-50 border border-sky-100 rounded-xl p-4 text-sm text-slate-700">
+      <strong>Our Commitment:</strong> Reliable service, compliant installations and complete protection for people, property and critical assets.
+    </div>
+  </section>
+
+  <!-- Main layout: left sticky nav + content -->
+  <main id="services" class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+    <!-- Left sticky nav (on large screens) -->
+    <aside class="hidden lg:block lg:col-span-1">
+      <div class="sticky-nav bg-white rounded-xl p-5 shadow-sm border">
+        <div class="text-sm text-slate-500">Jump to</div>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="#fire-alarm" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600"></span> Fire Alarm & Detection</a></li>
+          <li><a href="#hydrants" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600/70"></span> Fire Hydrants</a></li>
+          <li><a href="#sprinklers" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600/70"></span> Sprinkler Systems</a></li>
+          <li><a href="#gas-suppression" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600/70"></span> Gas Suppression</a></li>
+          <li><a href="#access-control" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600/70"></span> Access Control</a></li>
+          <li><a href="#cctv" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600/70"></span> CCTV</a></li>
+          <li><a href="#other" class="flex items-center gap-3 hover:text-sky-600"><span class="nav-dot bg-sky-600/70"></span> Other Services</a></li>
+        </ul>
+
+        <div class="mt-6">
+          <a href="#contact" class="block text-center bg-gradient-to-r from-sky-600 to-indigo-600 text-white px-4 py-2 rounded-lg shadow">Request Quote</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <section id="services-list" class="lg:col-span-3 space-y-8">
+
+      <!-- Service card (repeat for each service) -->
+      <article id="fire-alarm" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <!-- Replace src with your image file -->
+          <img src="Fire alarm.png" alt="Fire Alarm" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-semibold">Fire Alarm & Detection</h3>
+              <p class="mt-2 text-sm text-slate-600">Design, supply and commissioning of addressable and conventional fire alarm systems. Regular testing, certification and maintenance to keep people and property safe.</p>
+            </div>
+            <div class="hidden md:block text-xs text-slate-400">Certified • Code-compliant</div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-3">
+            <span class="inline-block bg-sky-50 text-sky-700 text-xs px-2 py-1 rounded">Addressable</span>
+            <span class="inline-block bg-sky-50 text-sky-700 text-xs px-2 py-1 rounded">Commissioning</span>
+            <span class="inline-block bg-sky-50 text-sky-700 text-xs px-2 py-1 rounded">Maintenance</span>
+          </div>
+        </div>
+      </article>
+
+      <article id="hydrants" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <img src="Fire hydrant (2).png" alt="" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-semibold">Fire Hydrants</h3>
+          <p class="mt-2 text-sm text-slate-600">Design and installation of hydrant networks, pumps and valves. We ensure hydraulic calculations, flow testing and reliable municipal integration.</p>
+          <div class="mt-4 text-xs text-slate-400">Hydraulic testing • Commissioning</div>
+        </div>
+      </article>
+
+      <article id="sprinklers" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <img src="fire-sprinkler1-2.jpg" alt="Sprinkler Systems" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-semibold">Sprinkler & Deluge Systems</h3>
+          <p class="mt-2 text-sm text-slate-600">Wet/dry, pre-action and deluge systems for industrial halls, server rooms and commercial buildings. Full piping design and hydraulic balancing.</p>
+          <div class="mt-4 text-xs text-slate-400">Pre-action • Deluge • Wet systems</div>
+        </div>
+      </article>
+
+      <article id="Computer Hardware" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <img src="computer Hardware.png" alt="" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-semibold">Computer Hardware</h3>
+          <p class="mt-2 text-sm text-slate-600">Supply and installation of servers, desktops and peripherals. We handle configuration, cabling, performance checks and seamless integration with your existing systems.</p>
+          <div class="mt-4 text-xs text-slate-400">Hardware</div>
+        </div>
+      </article>
+
+      <article id="gas-suppression" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <img src="Gas suppresison.jpg" alt="Gas Suppression" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-semibold">Gas Suppression (FM-200 / NOVEC)</h3>
+          <p class="mt-2 text-sm text-slate-600">Clean agent systems for data centres and critical spaces — fast discharge, minimal downtime and full safety interlocks. System design to relevant Tier / NFPA codes.</p>
+          <div class="mt-4 text-xs text-slate-400">Data centre protection • 3rd party tested</div>
+        </div>
+      </article>
+
+      <article id="access-control" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <img src="Accessss controll.jpg" alt="Access Control" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-semibold">Access Control & Visitor Management</h3>
+          <p class="mt-2 text-sm text-slate-600">Biometric, card and mobile access solutions with centralized management, visitor workflows and integration with HR/ERP systems.</p>
+          <div class="mt-4 text-xs text-slate-400">Integration • Audit trails</div>
+        </div>
+      </article>
+
+      <article id="cctv" class="bg-white rounded-2xl p-6 shadow-sm border service-card grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div class="md:col-span-1 overflow-hidden rounded-lg">
+          <img src="4K-Cameras.jpg" alt="CCTV" class="card-media w-full rounded-lg" />
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-semibold">CCTV & Video Analytics</h3>
+          <p class="mt-2 text-sm text-slate-600">IP & HD camera deployments with intelligent analytics — people counting, perimeter detection, ANPR and cloud storage options.</p>
+          <div class="mt-4 text-xs text-slate-400">AI analytics • Central monitoring</div>
+        </div>
+      </article>
+
+      <!-- Group other smaller services in 2-column grid -->
+      <div id="other" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="bg-white rounded-2xl p-4 shadow-sm border service-card flex gap-4 items-start">
+          <img src="Rodent Repellent Systems.jpg" alt="Rodent Repellent" class="w-24 h-24 rounded-md object-cover"/>
+          <div>
+            <h4 class="font-semibold">Rodent Repellent Systems</h4>
+            <p class="mt-1 text-sm text-slate-600">Ultrasonic systems and preventative site-proofing to protect wiring and critical equipment.</p>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-4 shadow-sm border service-card flex gap-4 items-start">
+          <img src="Public Address & Evacuation.jpg" alt="Public Address" class="w-24 h-24 rounded-md object-cover"/>
+          <div>
+            <h4 class="font-semibold">Public Address & Evacuation</h4>
+            <p class="mt-1 text-sm text-slate-600">Paging and emergency evacuation systems integrated with fire alarm events.</p>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-4 shadow-sm border service-card flex gap-4 items-start">
+          <img src="vesda.jpg" alt="Vesda" class="w-24 h-24 rounded-md object-cover"/>
+          <div>
+            <h4 class="font-semibold">VESDA / Aspirating Detection</h4>
+            <p class="mt-1 text-sm text-slate-600">Very early smoke detection systems for high-value or high-risk spaces.</p>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-4 shadow-sm border service-card flex gap-4 items-start">
+          <img src="Kitchen Hood Suppression.jpg" alt="Kitchen Hood" class="w-24 h-24 rounded-md object-cover"/>
+          <div>
+            <h4 class="font-semibold">Kitchen Hood Suppression</h4>
+            <p class="mt-1 text-sm text-slate-600">Specialized suppression systems for commercial kitchens and cooking equipment.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA strip -->
+      <div class="bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-2xl p-6 shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold">Need a tailored solution?</h3>
+          <p class="text-sm opacity-90">Tell us your site type and requirements — we’ll provide a free site assessment and quotation.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="#contact" class="bg-white text-sky-700 px-4 py-2 rounded-lg font-semibold shadow">Request Quote</a>
+          <a href="tel:+911234567890" class="bg-white/10 border border-white/20 px-4 py-2 rounded-lg">Call Sales</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="mt-12 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+      <!-- Column 1: Brand -->
+    <div>
+  <!-- Company Logo 120x120 -->
+  <img src="logo-120x120.png" alt="SecureTek Solutions Logo" class="w-28 h-28 object-contain">
+
+  <p class="mt-3 text-sm text-slate-300">
+    Securetek Solutions Pvt. Ltd.<br/>
+    Protection of Safety & Security Equipments
+  </p>
+</div>
+
+      <!-- Column 2: MAIN OFFICE text -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-3">MAIN OFFICE</h3>
+
+        <p class="font-medium text-cyan-200">Securetek Solutions Pvt. Ltd.</p>
+
+        <div class="mt-3 text-slate-300 space-y-2 leading-relaxed text-sm">
+          <p>No: 2, First floor,</p>
+          <p>RA Complex, Daddy's Garden Road,</p>
+          <p>Kammasandra, Electronic City Post,</p>
+          <p>Bangalore – 560100</p>
+
+          <p class="mt-3"><span class="font-medium text-slate-200">Contact no:</span> 9597078566</p>
+
+          <p class="mt-2">
+            <span class="font-medium text-slate-200">Email:</span><br>
+            <a href="mailto:info@Secureteksolutionspvt.com" class="text-cyan-300 hover:underline">info@Secureteksolutionspvt.com</a>,<br>
+            <a href="mailto:sales@Secureteksolutionspvt.com" class="text-cyan-300 hover:underline">sales@Secureteksolutionspvt.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 3: Route Map -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-3">ROUTE MAP</h4>
+
+        <div class="rounded-lg overflow-hidden border border-slate-800 shadow-sm">
+          <iframe
+            title="Securetek Solutions - map"
+            src="https://www.google.com/maps?q=No:+2,+First+floor,+RA+Complex,+Daddy's+Garden+Road,+Kammasandra,+Electronic+City+Post,+Bangalore+-+560100&output=embed"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="mt-3 text-sm">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=No:+2,+First+floor,+RA+Complex,+Daddy's+Garden+Road,+Kammasandra,+Electronic+City+Post,+Bangalore+-+560100"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-block mt-2 text-cyan-300 hover:underline">
+            View larger map
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-slate-400 flex justify-between">
+        <div>© <span id="year"></span> Securetek Solutions Pvt. Ltd.</div>
+        <div class="space-x-4">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // small smooth-scroll for left nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(!href.startsWith('#')) return;
+        const target = document.querySelector(href);
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>

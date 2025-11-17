@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Securetek Solutions Pvt. Ltd.</title>
+  <meta name="description" content="Securetek Solutions - Fire safety, gas suppression, CCTV, access control and integrated security solutions." />
+  <!-- Tailwind CDN for quick prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-blue: #0f4c81; /* primary */
+      --brand-teal: #0ea5a4; /* accent */
+      --accent-red: #c0392b; /* CTA red */
+      --muted: #6b7280;
+    }
+    html,body{font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+
+    /* subtle gradient page background */
+    body{
+      background: linear-gradient(180deg, rgba(14,76,129,0.06), rgba(14,76,129,0.02));
+    }
+
+    /* header glass */
+    .nav-glass{
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.55));
+    }
+
+    /* hero shapes */
+    .floating-shape{opacity:0.08; filter: blur(20px);}
+
+    /* product card hover */
+    .card-tilt{transform: perspective(1000px) translateZ(0); transition: transform .35s ease, box-shadow .35s ease;}
+    .card-tilt:hover{transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 40px rgba(2,6,23,0.12);} 
+
+    /* dot active */
+    .dot-active{background-color: rgba(15,76,129,0.95) !important;}
+
+    /* smooth image fade */
+    .hero-slide{transition: opacity .8s ease, transform .8s ease;}
+
+    /* subtle animation for counters */
+    .counter { font-variant-numeric: tabular-nums; }
+
+    /* testimonial-specific transitions and focus ring */
+    .test-slide { transition: opacity .6s cubic-bezier(.2,.9,.2,1), transform .6s cubic-bezier(.2,.9,.2,1); }
+
+    /* make avatars crisp */
+    #testimonialsSlides img { display:block; object-fit:cover; width:100%; height:100%; }
+
+    /* accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      *{transition:none!important;animation:none!important}
+    }
+  </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+  <!-- NAV (glass + shadow) -->
+  <header class="sticky top-0 z-40 nav-glass shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- Logo image (replace src with your file) -->
+      <img src="logo-120x120.png" alt="Securetek Solutions logo" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+
+      <div>
+        <h1 class="text-base md:text-lg font-semibold">Securetek Solutions Pvt. Ltd.</h1>
+        <p class="text-xs md:text-sm text-gray-500">Fire Safety • Security • 20+ Years Experience</p>
+      </div>
+    </div>
+
+    <!-- rest of header unchanged -->
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#home" class="hover:text-sky-700">Home</a>
+      <a href="#about" class="hover:text-sky-700">About us</a>
+      <a href="#products" class="hover:text-sky-700">Products</a>
+      <a href="service.html" class="hover:text-sky-700">Services</a>
+      <a href="#contact" class="hover:text-sky-700">Contact</a>
+      <a href="#quote" class="ml-4 inline-block bg-gradient-to-r from-sky-600 to-indigo-600 text-white px-4 py-2 rounded shadow">Request Quote</a>
+    </nav>
+
+    <button class="md:hidden p-2 rounded border" aria-label="menu">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+
+      <button class="md:hidden p-2 rounded border" aria-label="menu">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO: taller, centered, with bold message + CTA -->
+  <section id="home" class="relative overflow-hidden">
+    <!-- decorative blurred shapes -->
+    <svg class="absolute -top-20 -left-20 w-72 h-72 floating-shape" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#0ea5a4"/><stop offset="1" stop-color="#0f4c81"/></linearGradient></defs><circle cx="60" cy="60" r="60" fill="url(#g1)"/></svg>
+    <svg class="absolute -bottom-28 -right-28 w-96 h-96 floating-shape" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#c026d3"/></linearGradient></defs><rect x="0" y="0" width="200" height="200" rx="24" fill="url(#g2)"/></svg>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 relative grid md:grid-cols-2 gap-10 items-center">
+      <div class="z-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Protection. Performance. Peace of Mind.</h2>
+        <p class="mt-4 text-gray-600 text-sm md:text-base max-w-xl">Integrated fire, gas and electronic security systems designed for data centres, commercial buildings and industrial facilities. Certified designs, reliable installations and responsive maintenance — all tailored to your risk profile.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="service.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-sky-600 to-indigo-600 text-white font-semibold shadow-lg">Get a Free Quote</a>
+          <a href="service.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-200 text-slate-700">Explore Products</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-3 gap-4 max-w-sm">
+          <div class="bg-white/90 rounded-xl p-3 text-center shadow-sm">
+            <div class="text-sm text-gray-500">Years</div>
+            <div class="text-xl font-bold counter">20+</div>
+            <div class="text-xs text-gray-400">industry experience</div>
+          </div>
+          <div class="bg-white/90 rounded-xl p-3 text-center shadow-sm">
+            <div class="text-sm text-gray-500">Satisfaction</div>
+            <div class="text-xl font-bold counter">95%</div>
+            <div class="text-xs text-gray-400">client retention</div>
+          </div>
+          <div class="bg-white/90 rounded-xl p-3 text-center shadow-sm">
+            <div class="text-sm text-gray-500">Support</div>
+            <div class="text-xl font-bold counter">24/7</div>
+            <div class="text-xs text-gray-400">service availability</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider area: keep your existing slides but add a glass card overlay for content -->
+      <div class="relative rounded-xl overflow-hidden shadow-xl h-80 md:h-96">
+        <div id="slides" class="relative w-full h-full">
+          <div class="absolute inset-0 hero-slide opacity-100" data-index="0" aria-hidden="false">
+            <img src="Hero1.jpg" alt="Fire safety solution" class="w-full h-full object-cover object-center" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent"></div>
+          </div>
+           <div class="absolute inset-0 hero-slide opacity-0" data-index="1" aria-hidden="true">
+  <img
+    src="Hero2.jpg"
+    alt="CCTV installation"
+    class="w-full h-64 md:h-80 object-cover object-center mx-auto"
+    loading="lazy"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent"></div>
+</div>
+
+          <div class="absolute inset-0 hero-slide opacity-0" data-index="2" aria-hidden="true">
+            <img src="Hero3.jpg" alt="Gas suppression" class="w-full h-full object-cover object-center" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- controls -->
+        <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow" aria-label="Previous slide">
+          <svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow" aria-label="Next slide">
+          <svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div id="dotsContainer" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT strip (darker card) -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <div class="grid md:grid-cols-3 gap-8 items-start bg-gradient-to-r from-white to-slate-50 rounded-xl p-6 shadow-sm">
+      <div class="md:col-span-2">
+        <h3 class="text-xl md:text-2xl font-bold">WELCOME TO Securetek SOLUTIONS</h3>
+        <p class="mt-4 text-gray-600 leading-relaxed">We specialise in the design, installation and maintenance of fire protection, gas suppression and electronic security systems. Our engineers follow industry codes of practice and deliver bespoke solutions for small offices to critical data halls.</p>
+
+        <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
+          <li>• Fire Alarm & Detection (Addressable)</li>
+          <li>• Gas Suppression (NOVEC / FM-200)</li>
+          <li>• CCTV & Intelligent Analytics</li>
+          <li>• Access Control & Visitor Management</li>
+        </ul>
+
+        <a href="service.html" class="inline-block mt-6 bg-sky-700 text-white px-5 py-2 rounded-lg">View Products</a>
+      </div>
+
+      <aside class="hidden md:block bg-white rounded-xl p-4 shadow-sm">
+        <h4 class="font-semibold">Key Focus</h4>
+        <ul class="mt-3 text-sm space-y-2 text-gray-600">
+          <li>Design • Installation • Maintenance</li>
+          <li>Code-compliant installations</li>
+          <li>24/7 remote monitoring</li>
+          <li>On-site certified technicians</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PRODUCTS: modern cards -->
+   <!-- PRODUCTS: modern cards (non-clickable) -->
+<section id="products" class="max-w-7xl mx-auto px-6 py-12">
+  <h3 class="text-2xl font-bold text-center">Products</h3>
+  <p class="text-center text-gray-600 mt-2 max-w-2xl mx-auto"></p>
+
+  <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Each product card is now a non-clickable div -->
+    <div class="block bg-white rounded-xl overflow-hidden card-tilt shadow-sm">
+      <img src="Access control.jpg" alt="Access Control Systems" class="w-full h-40 object-cover"/>
+      <div class="p-4">
+        <h4 class="font-semibold text-slate-800">Access Control Systems</h4>
+        <p class="text-sm text-gray-600 mt-2">Biometric, card and integrated access solutions.</p>
+      </div>
+    </div>
+
+    <div class="block bg-white rounded-xl overflow-hidden card-tilt shadow-sm">
+      <img src="polycab-fire-detector-system-1000x1000.jpg" alt="Fire Alarm System" class="w-full h-40 object-cover"/>
+      <div class="p-4">
+        <h4 class="font-semibold text-slate-800">Fire Alarm System</h4>
+        <p class="text-sm text-gray-600 mt-2">Addressable and conventional fire alarm systems.</p>
+      </div>
+    </div>
+
+    <div class="block bg-white rounded-xl overflow-hidden card-tilt shadow-sm">
+      <img src="4K-Cameras.jpg" alt="CCTV Systems" class="w-full h-40 object-cover"/>
+      <div class="p-4">
+        <h4 class="font-semibold text-slate-800">CCTV Systems</h4>
+        <p class="text-sm text-gray-600 mt-2">HD & IP surveillance cameras and recorders.</p>
+      </div>
+    </div>
+
+    <div class="block bg-white rounded-xl overflow-hidden card-tilt shadow-sm">
+      <img src="public-address-system.jpg" alt="Public Address System" class="w-full h-40 object-cover"/>
+      <div class="p-4">
+        <h4 class="font-semibold text-slate-800">Public Address System</h4>
+        <p class="text-sm text-gray-600 mt-2">Paging & evacuation systems for buildings.</p>
+      </div>
+    </div>
+
+    <div class="block bg-white rounded-xl overflow-hidden card-tilt shadow-sm">
+      <img src="fire-extinguisher-system-data-storage-in-data-war-2024-11-03-08-08-43-utc.jpg" alt="Fire Suppression System" class="w-full h-40 object-cover"/>
+      <div class="p-4">
+        <h4 class="font-semibold text-slate-800">Fire Suppression System</h4>
+        <p class="text-sm text-gray-600 mt-2">FM-200, NOVEC, water-mist and deluge systems.</p>
+      </div>
+    </div>
+
+    <div class="block bg-white rounded-xl overflow-hidden card-tilt shadow-sm">
+      <img src="rabi-banner-1024x350.jpg" alt="Fire Fighting System" class="w-full h-40 object-cover"/>
+      <div class="p-4">
+        <h4 class="font-semibold text-slate-800">Fire Fighting System</h4>
+        <p class="text-sm text-gray-600 mt-2">Hydrant and sprinkler plant installations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-8">
+    <!-- Keep View More as a button if you want it clickable; remove or convert to non-clickable if desired -->
+    <a class="inline-block bg-gradient-to-r from-sky-600 to-indigo-600 text-white px-6 py-2 rounded-lg shadow" href="Service.html">View More</a>
+  </div>
+</section>
+
+     <!-- TESTIMONIALS -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <h3 class="text-2xl font-bold text-center">What Clients Say About Us</h3>
+
+  <div class="mt-8 relative" id="testimonialsBlock">
+    <div id="testimonialsCarousel" class="relative rounded-2xl overflow-visible" role="region" aria-label="Client testimonials">
+
+      <!-- Slides container -->
+      <div id="testimonialsSlides" class="relative h-72 md:h-64 lg:h-72">
+        <!-- Slide 0 (active) -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="0" aria-hidden="false" style="opacity:1; transform:translateY(0) scale(1);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-sky-500 to-indigo-600 shadow-lg">
+                <div class="w-full h-full rounded-full bg-white/10 flex items-center justify-center text-white font-semibold overflow-hidden">
+                  <span class="text-lg">IT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <svg class="absolute -left-6 -top-6 w-28 h-28 opacity-8 pointer-events-none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="75" font-size="120" fill="rgba(255,255,255,0.06)">“</text>
+              </svg>
+
+              <div class="bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-2xl p-6 shadow-2xl">
+                <p class="mt-1 text-base md:text-lg leading-relaxed">Securetek installed and maintains CCTV and intruder alarm systems for us. The work is completed every time neatly, efficiently and with pride. Their after sales service is faultless.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">IT Manager</div>
+                    <div class="text-xs opacity-90">Data Centre</div>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-xs opacity-90">
+                    <div class="inline-flex items-center gap-1 bg-white/10 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 1 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="1" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-amber-400 to-rose-500 shadow">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold text-2xl">
+  F
+</div>
+
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Their gas suppression solution for our server room exceeded expectations. Commissioning was quick and the documentation was excellent.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Facilities Head</div>
+                    <div class="text-xs text-gray-500">FinTech</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="2" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-slate-300 to-slate-400 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">BM</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Professional team, clear documentation and neat installation. Maintenance contract has kept everything running smoothly.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Building Manager</div>
+                    <div class="text-xs text-gray-500">Retail Mall</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="3" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-cyan-400 to-blue-600 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">CT</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Excellent integration between access control and our HR system — Securetek delivered on time and on budget.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">CTO</div>
+                    <div class="text-xs text-gray-500">Logistics Co.</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 4 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="4" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-rose-400 to-pink-600 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">OP</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Very responsive service team. When we had a minor fault they resolved it the same day under the support contract.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Operations Manager</div>
+                    <div class="text-xs text-gray-500">Hospital</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 5 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="5" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-emerald-400 to-teal-600 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">SL</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Their CCTV analytics helped reduce incidents in our parking area — highly recommended for retail complexes.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Security Lead</div>
+                    <div class="text-xs text-gray-500">Commercial Complex</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.6</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 6 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="6" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-purple-400 to-violet-600 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">RM</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Good consultation and risk assessment. The tailored design matched our insurance requirements and simplified approvals.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Risk Manager</div>
+                    <div class="text-xs text-gray-500">Manufacturing</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 7 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="7" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-indigo-400 to-sky-700 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">AC</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">Installation crew were punctual and left the site tidy. Controls are easy to use and well documented.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Admin</div>
+                    <div class="text-xs text-gray-500">Education Campus</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.6</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 8 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="8" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-yellow-400 to-amber-600 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-slate-700 font-semibold">PM</div>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">The fire alarm upgrade was seamless with minimal downtime. Excellent coordination with our operations team.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Plant Manager</div>
+                    <div class="text-xs text-gray-500">Food Processing</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 9 -->
+        <article class="absolute inset-0 px-4 py-6 test-slide" data-index="9" aria-hidden="true" style="opacity:0; transform:translateY(8px) scale(.98);">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-sky-500 to-indigo-600 shadow-lg">
+                <img src="CLIENT_PLACEHOLDER_10.jpg" alt="Head of Security" class="w-full h-full rounded-full object-cover"/>
+              </div>
+            </div>
+
+            <div class="relative flex-1">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <div class="text-4xl leading-none text-slate-200 -mt-2">“</div>
+                <p class="mt-1 text-base md:text-lg leading-relaxed text-slate-700">A technically strong team and great project management. Post-install support has been proactive and reliable.</p>
+
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">Head of Security</div>
+                    <div class="text-xs text-gray-500">Corporate HQ</div>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <div class="inline-flex items-center gap-1 bg-slate-100 rounded-full px-2 py-1">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.451a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.39 2.431c-.784.57-1.84-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.623 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"/></svg>
+                      <span>4.9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Prev / Next -->
+      <button id="testPrev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-slate-800 p-3 rounded-full shadow-lg hover:scale-105 z-20" aria-label="Previous testimonial">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+
+      <button id="testNext" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-slate-800 p-3 rounded-full shadow-lg hover:scale-105 z-20" aria-label="Next testimonial">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <!-- pagination dots -->
+      <div id="testDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+    </div>
+  </div>
+
+  <style>
+    /* testimonial-specific transitions and focus ring */
+    .test-slide { transition: opacity .6s cubic-bezier(.2,.9,.2,1), transform .6s cubic-bezier(.2,.9,.2,1); }
+    #testDots .dot { width: 10px; height: 10px; border-radius: 9999px; background: rgba(0,0,0,0.2); border: 2px solid rgba(255,255,255,0.25); transition: transform .18s, opacity .18s; }
+    #testDots .dot[aria-current="true"] { transform: scale(1.15); background: white; opacity: 1; }
+  </style>
+
+  <script>
+    (function() {
+      const slides = Array.from(document.querySelectorAll('#testimonialsSlides .test-slide'));
+      const prev = document.getElementById('testPrev');
+      const next = document.getElementById('testNext');
+      const dotsContainer = document.getElementById('testDots');
+      if (!slides.length) return;
+
+      // build dots
+      slides.forEach((s, i) => {
+        const b = document.createElement('button');
+        b.className = 'dot';
+        b.setAttribute('data-dot', i);
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Show testimonial ' + (i+1));
+        b.setAttribute('aria-current', 'false');
+        b.style.transition = 'opacity .2s';
+        dotsContainer.appendChild(b);
+      });
+      const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+
+      let current = 0;
+      let timer = null;
+
+      function show(idx) {
+        slides.forEach((s, i) => {
+          const active = i === idx;
+          s.style.opacity = active ? '1' : '0';
+          s.style.transform = active ? 'translateY(0) scale(1)' : 'translateY(8px) scale(.98)';
+          s.style.pointerEvents = active ? 'auto' : 'none';
+          s.setAttribute('aria-hidden', active ? 'false' : 'true');
+        });
+        dots.forEach((d, i) => {
+          d.setAttribute('aria-current', i===idx ? 'true' : 'false');
+          d.style.opacity = i === idx ? '1' : '0.45';
+        });
+        current = idx;
+      }
+
+      function nextSlide() { show((current + 1) % slides.length); }
+      function prevSlide() { show((current - 1 + slides.length) % slides.length); }
+
+      // events
+      next.addEventListener('click', () => { nextSlide(); restart(); });
+      prev.addEventListener('click', () => { prevSlide(); restart(); });
+      dots.forEach(d => d.addEventListener('click', (e) => { show(+e.target.dataset.dot); restart(); }));
+
+      // keyboard support
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { nextSlide(); restart(); }
+        if (e.key === 'ArrowLeft') { prevSlide(); restart(); }
+      });
+
+      // autoplay
+      function start() { timer = setInterval(nextSlide, 6000); }
+      function restart() { clearInterval(timer); start(); }
+
+      // init
+      show(0);
+      start();
+
+      // pause on hover
+      const carousel = document.getElementById('testimonialsCarousel');
+      carousel.addEventListener('mouseenter', () => clearInterval(timer));
+      carousel.addEventListener('mouseleave', () => start());
+    })();
+  </script>
+</section>`
+
+
+  <!-- FOOTER -->
+ <footer id="contact" class="bg-gray-900 text-gray-200">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-3">
+        <!-- Logo image (replace src with your file) -->
+        <img src="logo-120x120.png" alt="Securetek Solutions logo" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+
+        <div>
+          <h4 class="font-semibold">Securetek Solutions Pvt. Ltd.</h4>
+          <p class="text-sm text-gray-400">Protection of Safety &amp; Security Equipments</p>
+        </div>
+      </div>
+    </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-3">MAIN OFFICE</h3>
+
+        <p class="font-medium text-cyan-200">Securetek Solutions Pvt. Ltd.</p>
+
+        <div class="mt-3 text-slate-300 space-y-2 leading-relaxed text-sm">
+          <p>No: 2, First floor,</p>
+          <p>RA Complex, Daddy's Garden Road,</p>
+          <p>Kammasandra, Electronic City Post,</p>
+          <p>Bangalore – 560100</p>
+
+          <p class="mt-3"><span class="font-medium text-slate-200">Contact no:</span> 9597078566</p>
+
+          <p class="mt-2">
+            <span class="font-medium text-slate-200">Email:</span><br>
+            <a href="mailto:info@Secureteksolutionspvt.com" class="text-cyan-300 hover:underline">info@Secureteksolutionspvt.com</a>,<br>
+            <a href="mailto:sales@Secureteksolutionspvt.com" class="text-cyan-300 hover:underline">sales@Secureteksolutionspvt.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-3">ROUTE MAP</h4>
+
+        <div class="rounded-lg overflow-hidden border border-slate-800 shadow-sm">
+          <iframe
+            title="Securetek Solutions - map"
+            src="https://www.google.com/maps?q=No:+2,+First+floor,+RA+Complex,+Daddy's+Garden+Road,+Kammasandra,+Electronic+City+Post,+Bangalore+-+560100&output=embed"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="mt-3 text-sm">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=No:+2,+First+floor,+RA+Complex,+Daddy's+Garden+Road,+Kammasandra,+Electronic+City+Post,+Bangalore+-+560100"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-block mt-2 text-cyan-300 hover:underline">
+            View larger map
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-slate-400 flex justify-between">
+        <div>© <span id="year"></span> Securetek Solutions Pvt. Ltd.</div>
+        <div class="space-x-4">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple hero slider with dynamic dots
+    (function() {
+      const slides = Array.from(document.querySelectorAll('.hero-slide'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsContainer = document.getElementById('dotsContainer');
+      if (!slides.length) return;
+
+      slides.forEach((s, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'w-3 h-3 rounded-full bg-white/60 dot';
+        btn.setAttribute('data-dot', i);
+        btn.type = 'button';
+        btn.setAttribute('aria-label', 'Show slide ' + (i+1));
+        dotsContainer.appendChild(btn);
+      });
+
+      const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+      let current = 0;
+      let autoTimer = null;
+
+      function show(idx) {
+        slides.forEach((s, i) => {
+          s.style.opacity = i === idx ? '1' : '0';
+          s.style.transform = i === idx ? 'translateY(0)' : 'translateY(8px)';
+        });
+        dots.forEach((d, i) => {
+          d.style.opacity = i === idx ? '1' : '0.45';
+          if (i === idx) d.classList.add('dot-active'); else d.classList.remove('dot-active');
+        });
+        current = idx;
+      }
+
+      function next() { show((current + 1) % slides.length); }
+      function prev() { show((current - 1 + slides.length) % slides.length); }
+
+      if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+      if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+      dots.forEach(d => d.addEventListener('click', (e) => { show(+e.target.dataset.dot); resetAuto(); }));
+
+      function startAuto() { autoTimer = setInterval(next, 6000); }
+      function resetAuto() { if (autoTimer) clearInterval(autoTimer); startAuto(); }
+
+      show(0);
+      startAuto();
+    })();
+  </script>
+
+  <!-- Testimonials JS (keeps your original logic) -->
+  <script>
+    (function() {
+      const slides = Array.from(document.querySelectorAll('#testimonialsSlides .test-slide'));
+      const prev = document.getElementById('testPrev');
+      const next = document.getElementById('testNext');
+      const dotsContainer = document.getElementById('testDots');
+      if (!slides.length) return;
+
+      slides.forEach((s, i) => {
+        const b = document.createElement('button');
+        b.className = 'w-3 h-3 rounded-full bg-white/60 dot';
+        b.setAttribute('data-dot', i);
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Show testimonial ' + (i+1));
+        b.style.transition = 'opacity .2s';
+        dotsContainer.appendChild(b);
+      });
+      const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+
+      let current = 0;
+      let timer = null;
+
+      function show(idx) {
+        slides.forEach((s, i) => {
+          const active = i === idx;
+          s.style.opacity = active ? '1' : '0';
+          s.style.transform = active ? 'translateY(0)' : 'translateY(8px)';
+          s.style.pointerEvents = active ? 'auto' : 'none';
+          s.setAttribute('aria-hidden', active ? 'false' : 'true');
+        });
+        dots.forEach((d, i) => d.style.opacity = i === idx ? '1' : '0.45');
+        current = idx;
+      }
+
+      function nextSlide() { show((current + 1) % slides.length); }
+      function prevSlide() { show((current - 1 + slides.length) % slides.length); }
+
+      next.addEventListener('click', () => { nextSlide(); restart(); });
+      prev.addEventListener('click', () => { prevSlide(); restart(); });
+      dots.forEach(d => d.addEventListener('click', (e) => { show(+e.target.dataset.dot); restart(); }));
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { nextSlide(); restart(); }
+        if (e.key === 'ArrowLeft') { prevSlide(); restart(); }
+      });
+
+      function start() { timer = setInterval(nextSlide, 6000); }
+      function restart() { clearInterval(timer); start(); }
+
+      show(0);
+      start();
+
+      const carousel = document.getElementById('testimonialsCarousel');
+      carousel.addEventListener('mouseenter', () => clearInterval(timer));
+      carousel.addEventListener('mouseleave', () => start());
+    })();
+  </script>
+</body>
+</html>
